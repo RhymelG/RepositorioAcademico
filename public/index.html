@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Portafolio de Certificaciones</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Mi Portafolio de Certificaciones</h1>
+    <div class="stats-panel">
+      <div class="stat-total">
+        <span class="stat-number" id="totalCerts">0</span>
+        <span class="stat-label">Certificaciones Totales</span>
+      </div>
+      <div class="stat-issuers" id="issuerStats">
+        <!-- Se llenará dinámicamente -->
+      </div>
+    </div>
+    <div class="filter-bar">
+      <input type="text" id="searchInput" placeholder="Buscar curso...">
+      <select id="issuerFilter">
+        <option value="">Todas las entidades</option>
+      </select>
+      <button id="sortDate">Ordenar por fecha</button>
+    </div>
+    <div class="certificates-grid" id="list"></div>
+  </div>
+  <div id="viewer" class="overlay">
+    <div class="viewer-box">
+      <button id="backToMenu">&#8592;</button>
+      <button id="closeViewer">×</button>
+      <iframe id="pdfFrame" src="" frameborder="0"></iframe>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
